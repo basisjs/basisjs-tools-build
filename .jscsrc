@@ -1,0 +1,71 @@
+{
+    "requireCurlyBraces": ["do", "try", "catch"],
+
+    "requireSpaceAfterKeywords": ["if", "else", "for", "while", "do", "switch", "return", "try"],
+    "disallowSpaceAfterKeywords": ["catch"],
+
+    "requireParenthesesAroundIIFE": true,
+
+    "disallowSpacesInFunctionExpression": {
+        "beforeOpeningRoundBrace": true,
+        "beforeOpeningCurlyBrace": true
+    },
+
+    "disallowMultipleVarDecl": true,
+    "disallowEmptyBlocks": true,
+
+    "requireSpacesInsideObjectBrackets": "all",
+    "disallowSpacesInsideArrayBrackets": true,
+    "disallowSpacesInsideParentheses": true,
+
+    "disallowSpaceAfterObjectKeys": true,
+
+    "requireCommaBeforeLineBreak": true,
+
+    "disallowSpaceAfterBinaryOperators": ["!"],
+    "disallowSpaceAfterPrefixUnaryOperators": ["++", "--", "+", "-", "!"],
+    "disallowSpaceBeforePostfixUnaryOperators": ["++", "--"],
+
+    "requireSpacesInConditionalExpression": true,
+    "requireSpaceBeforeBinaryOperators": ["+", "-", "/", "*", "=", "==", "===", "!=", "!=="],
+    "requireSpaceAfterBinaryOperators": ["+", "-", "/", "*", "=", "==", "===", "!=", "!=="],
+
+    "requireOperatorBeforeLineBreak": ["/", "*", "&&", "||", "&", "|", "=", "==", "===", "!=", "!==", ">", ">=", "<", "<="],
+
+    "disallowImplicitTypeConversion": ["string", "binary"],
+
+    "disallowMultipleLineStrings": true,
+    "validateQuoteMarks": "'",
+    "requireSemicolons": true,
+
+    "disallowMixedSpacesAndTabs": true,
+    "disallowTrailingWhitespace": true,
+    //"validateLineBreaks": "LF",
+    "requireLineFeedAtFileEnd": true,
+
+    "disallowKeywords": ["with", "eval"],
+    "requireKeywordsOnNewLine": ["else", "while", "for", "do", "return", "switch", "case", "try", "break"],
+    "disallowKeywordsOnNewLine": ["catch"],
+    "requireCapitalizedConstructors": true,
+
+    "validateJSDoc": {
+        //"checkRedundantParams": true,
+        "checkParamNames": true,
+        "requireParamTypes": true
+    },
+
+    "additionalRules": [
+        "scripts/jscs/*.js"
+    ],
+
+    "excludeFiles": [
+        "scripts",
+        "node_modules",
+        "test/extract/env",
+        "test/extract/theme-fallback",
+        "lib/create/template",
+        "lib/ast/css/parser.js",
+        "lib/ast/js/parser.js",
+        "lib/ast/js/translator.js"
+    ]
+}

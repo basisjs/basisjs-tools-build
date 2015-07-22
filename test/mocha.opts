@@ -1,0 +1,2 @@
+test/extract/*.js
+-u bdd
