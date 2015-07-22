@@ -1,6 +1,6 @@
 module.exports = {
   ast: require('./ast'),
   extract: require('./extract'),
-  lint: require('./build'),
+  lint: require('./lint'),
   build: require('./build')
 };
