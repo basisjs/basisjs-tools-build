@@ -40,7 +40,6 @@
   "files": [
     "bin",
     "lib",
-    "index.js",
     "LICENSE",
     "README.md"
   ]
