@@ -59,13 +59,8 @@
     ],
 
     "excludeFiles": [
-        "scripts",
         "node_modules",
         "test/extract/env",
-        "test/extract/theme-fallback",
-        "lib/create/template",
-        "lib/ast/css/parser.js",
-        "lib/ast/js/parser.js",
-        "lib/ast/js/translator.js"
+        "test/extract/theme-fallback"
     ]
 }
