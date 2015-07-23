@@ -28,7 +28,6 @@
     "htmlparser2": "3.8.3",
     "csso": "1.3.11",
     "uglify-js": "1.3.5",
-    "node-zip": "1.1.1",
     "mime": "1.3.4"
   },
   "devDependencies": {
