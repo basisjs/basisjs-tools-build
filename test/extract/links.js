@@ -144,7 +144,7 @@ function assertFileGraph(flow, expected, baseURI){
 
 function assertExtract(baseURI, path, args, files){
   process.env.PWD = baseURI + path;
-  return cli.commands.extract.run(args.concat('--target', 'none', '--silent'))
+  return cli.extract.run(args.concat('--target', 'none', '--silent'))
     .then(function(flow){
       assertFileGraph(flow, files, baseURI);
     });
