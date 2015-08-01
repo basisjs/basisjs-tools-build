@@ -59,7 +59,7 @@ describe('template fallback', function(){
 
   before(function(){
     process.env.PWD = path.resolve(__dirname, 'theme-fallback');
-    flowPromise = cli.extract.run(['--target', 'none', '--silent']);
+    flowPromise = cli.extract.run(['--silent']);
   });
 
   it('should find all files', function(){
