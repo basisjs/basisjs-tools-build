@@ -21,7 +21,7 @@
     "basisjs-tools-ast": "^1.0.0",
     "basisjs-tools-config": "basisjs/basisjs-tools-config",
 
-    "clap": "1.0.6",
+    "clap": "1.0.7",
     "chalk": "1.1.0",
     "exit": "0.1.2",
     "es6-promise-polyfill": "1.0.0",
