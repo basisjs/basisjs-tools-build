@@ -1,0 +1,10 @@
+{
+  "_meta": {
+    "type": {
+      "markup": "markup"
+    }
+  },
+  "en-US": {
+    "markup": "<b:include src=\"./bad-ref.tmpl\"/>"
+  }
+}
