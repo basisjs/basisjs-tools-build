@@ -24,7 +24,7 @@ function hasWarning(warns, criteria){
   });
 }
 
-describe.only('check files not found warning', function(){
+describe('check files not found warning', function(){
   var envPath = __dirname + '/env/not-found';
 
   it('default base', function(){
