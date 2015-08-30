@@ -18,11 +18,11 @@
     "node": ">=0.8.0"
   },
   "dependencies": {
-    "basisjs-tools-ast": "basisjs/basisjs-tools-ast",
     "basisjs-tools-config": "^1.0.0",
+    "basisjs-tools-ast": "^1.0.0",
 
     "clap": "1.0.8",
-    "chalk": "1.1.0",
+    "chalk": "1.1.1",
     "es6-promise-polyfill": "1.0.0",
     "seedrandom": "2.4.2",
 
