@@ -1,4 +1,6 @@
-[![NPM version](https://img.shields.io/npm/v/basisjs-tools-build.svg)](https://www.npmjs.com/package/basisjs-tools-build) [![Dependency Status](https://img.shields.io/david/basisjs/basisjs-tools-build.svg)](https://david-dm.org/basisjs/basisjs-tools-build) [![Build Status](https://travis-ci.org/basisjs/basisjs-tools-build.svg?branch=master)](https://travis-ci.org/basisjs/basisjs-tools-build)
+[![NPM version](https://img.shields.io/npm/v/basisjs-tools-build.svg)](https://www.npmjs.com/package/basisjs-tools-build)
+[![Dependency Status](https://img.shields.io/david/basisjs/basisjs-tools-build.svg)](https://david-dm.org/basisjs/basisjs-tools-build)
+[![Build Status](https://travis-ci.org/basisjs/basisjs-tools-build.svg?branch=master)](https://travis-ci.org/basisjs/basisjs-tools-build)
 
 This package provides set of tools to build and lint apps using [basis.js](https://github.com/basisjs/basisjs) framework. Tools could also provide app profile and resolve various path forms.
 
