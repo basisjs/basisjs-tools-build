@@ -9,13 +9,18 @@ Initial release as separate module
 - to output extract log `--target log` should be used
 - remove `none` value for `--target`
 - no more `AST` modifications on extract (`basis.resource`, `basis.require` etc.)
+- make `basis.js` config parse error as fatal
+- support for images in `<meta name="msapplication-*">`
+- fix: exception on html extract when `<link>` has no `href` attribute
 - make template isolate prefix reproducible (preparation for script and style freeze, `basis.js` support required)
 - take in account special comment (`/* basisjs-tools:disable-warnings */`) in css to avoid warnings for this file
 - improve warnings about missed files
 - warn on broken links (fatal) in some missed hard cases (didn't check before):
     - reference by namespace in template, i.e. `<b:include src="foo.bar"/>`
     - broken links in markup `l10n` tokens (warn doesn't add to flow)
+- drop support for `basis.l10n` v1 (`basis.js` prior `1.0`)
 - add some checks for duplicate parameter/property names in strint mode
+- add some ES6 globals to dict
 
 ### build
 
@@ -24,10 +29,13 @@ Initial release as separate module
 - add parallel run support
 - add presets support
 - basic `--single-file` implementation
+- fix `--css-inline-image` option
 - remove `zip` target
 - make command multi-run ready
+- support for images in `<meta name="msapplication-*">`
 - prevent accident original files rewrite
 - compress implicit template names for `l10n` markup tokens (reduce build size)
+- don't set `type="text/javascript"` for `<script>` in resulting html
 
 ### lint
 
@@ -36,11 +44,12 @@ Initial release as separate module
 - add parallel run support
 - add presets support
 - make possible set default reporter (`console`) via option
+- implement `junit` reporter
 
 ### Misc
 
-- trailing slash is not adding to `--base` and `--output` values
 - new command `find` that resolve filename by `basis.js` file reference
+- trailing slash is not adding to `--base` and `--output` values
 - `--output` option available only for `build` command
 - new option `--theme` that specify what themes should used for result
 (all themes by default), for now it's just ignore warnings for not in
