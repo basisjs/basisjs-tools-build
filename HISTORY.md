@@ -1,3 +1,7 @@
+## 1.0.1 (November 10, 2015)
+
+- bump `csso` version to `1.4.2`
+
 ## 1.0 (November 8, 2015)
 
 Initial release as separate module
