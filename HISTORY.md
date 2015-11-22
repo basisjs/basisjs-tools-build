@@ -1,3 +1,9 @@
+## 1.0.2 (November 22, 2015)
+
+- extract: return paths relative to `base`
+- extract: remove old `basis.js` l10n support in result (prior to `1.0`)
+- extract: fix `require` resolving for paths w/o extension for `basis.js` 1.5
+
 ## 1.0.1 (November 10, 2015)
 
 - bump `csso` version to `1.4.2`
