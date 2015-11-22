@@ -128,6 +128,25 @@
       } catch(e) {}
     })() || false;
 
+    function collapseDomFragment(fragment){
+      var startMarker = fragment.startMarker;
+      var endMarker = fragment.endMarker;
+      var cursor = startMarker.nextSibling;
+
+      while (cursor && cursor !== endMarker)
+      {
+        var tmp = cursor;
+        cursor = cursor.nextSibling;
+        fragment.appendChild(tmp);
+      }
+
+      endMarker.parentNode.removeChild(endMarker);
+      fragment.startMarker = null;
+      fragment.endMarker = null;
+
+      return startMarker;
+    }
+
 
    /**
     * @func
@@ -139,22 +158,16 @@
 
           if (newNode !== oldNode)
           {
-            if (newNode.nodeType === 11 && !newNode.insertedNodes)
+            if (newNode.nodeType === 11 && !newNode.startMarker)
             {
-              newNode.insertBefore(document.createTextNode(''), newNode.firstChild);
-              newNode.insertedNodes = basis.array(newNode.childNodes);
+              newNode.startMarker = document.createTextNode('');
+              newNode.endMarker = document.createTextNode('');
+              newNode.insertBefore(newNode.startMarker, newNode.firstChild);
+              newNode.appendChild(newNode.endMarker);
             }
 
-            if (oldNode.nodeType === 11)
-            {
-              var insertedNodes = oldNode.insertedNodes;
-              if (insertedNodes)
-              {
-                oldNode = insertedNodes[0];
-                for (var i = 1, node; node = insertedNodes[i]; i++)
-                  oldNode.parentNode.removeChild(node);
-              }
-            }
+            if (oldNode.nodeType === 11 && oldNode.startMarker)
+              oldNode = collapseDomFragment(oldNode);
 
             oldNode.parentNode.replaceChild(newNode, oldNode);
           }
@@ -213,78 +226,87 @@
    /**
     * @func
     */
-    var bind_attrClass = CLASSLIST_SUPPORTED
-      // classList supported
-      ? function(domRef, oldClass, newValue, anim){
-          var newClass = newValue ? newValue : '';
+    var bind_attrClass = CLASSLIST_SUPPORTED ? normalAttrClass : legacyAttrClass;
 
-          if (newClass != oldClass)
+    // classList supported
+    function normalAttrClass(domRef, oldClass, newValue, anim){
+      var classList = domRef.classList;
+
+      // IE11 and lower doesn't support classList for SVG
+      if (!classList)
+        return legacyAttrClass(domRef, oldClass, newValue, anim);
+
+      var newClass = newValue || '';
+
+      if (newClass != oldClass)
+      {
+        if (oldClass)
+          domRef.classList.remove(oldClass);
+
+        if (newClass)
+        {
+          domRef.classList.add(newClass);
+
+          if (anim)
           {
-            if (oldClass)
-              domRef.classList.remove(oldClass);
-
-            if (newClass)
-            {
-              domRef.classList.add(newClass);
-
-              if (anim)
-              {
-                domRef.classList.add(newClass + '-anim');
-                basis.nextTick(function(){
-                  domRef.classList.remove(newClass + '-anim');
-                });
-              }
-            }
+            domRef.classList.add(newClass + '-anim');
+            basis.nextTick(function(){
+              domRef.classList.remove(newClass + '-anim');
+            });
           }
-
-          return newClass;
         }
-      // old browsers are not support for classList
-      : function(domRef, oldClass, newValue, anim){
-          var newClass = newValue ? newValue : '';
+      }
 
-          if (newClass != oldClass)
+      return newClass;
+    }
+
+    // old browsers have no support for classList at all
+    // IE11 and lower doesn't support classList for SVG
+    function legacyAttrClass(domRef, oldClass, newValue, anim){
+      var newClass = newValue || '';
+
+      if (newClass != oldClass)
+      {
+        var className = domRef.className;
+        var classNameIsObject = typeof className != 'string';
+        var classList;
+
+        if (classNameIsObject)
+          className = className.baseVal;
+
+        classList = className.split(WHITESPACE);
+
+        if (oldClass)
+          basis.array.remove(classList, oldClass);
+
+        if (newClass)
+        {
+          classList.push(newClass);
+
+          if (anim)
           {
-            var className = domRef.className;
-            var classNameIsObject = typeof className != 'string';
-            var classList;
+            basis.array.add(classList, newClass + '-anim');
+            basis.nextTick(function(){
+              var classList = (classNameIsObject ? domRef.className.baseVal : domRef.className).split(WHITESPACE);
 
-            if (classNameIsObject)
-              className = className.baseVal;
+              basis.array.remove(classList, newClass + '-anim');
 
-            classList = className.split(WHITESPACE);
-
-            if (oldClass)
-              basis.array.remove(classList, oldClass);
-
-            if (newClass)
-            {
-              classList.push(newClass);
-
-              if (anim)
-              {
-                basis.array.add(classList, newClass + '-anim');
-                basis.nextTick(function(){
-                  var classList = (classNameIsObject ? domRef.className.baseVal : domRef.className).split(WHITESPACE);
-
-                  basis.array.remove(classList, newClass + '-anim');
-
-                  if (classNameIsObject)
-                    domRef.className.baseVal = classList.join(' ');
-                  else
-                    domRef.className = classList.join(' ');
-                });
-              }
-            }
-
-            if (classNameIsObject)
-              domRef.className.baseVal = classList.join(' ');
-            else
-              domRef.className = classList.join(' ');
+              if (classNameIsObject)
+                domRef.className.baseVal = classList.join(' ');
+              else
+                domRef.className = classList.join(' ');
+            });
           }
+        }
 
-          return newClass;
-        };
+        if (classNameIsObject)
+          domRef.className.baseVal = classList.join(' ');
+        else
+          domRef.className = classList.join(' ');
+      }
+
+      return newClass;
+    }
 
    /**
     * @func
@@ -364,9 +386,10 @@
             {
               var context = this.context;
               var bindings = this.bindings;
+              var onAction = this.action;
               var bindingInterface = this.bindingInterface;
-              tmpl = template.createInstance(context, null, function onRebuild(){
-                tmpl = newAttach.tmpl = template.createInstance(context, null, onRebuild, bindings, bindingInterface);
+              tmpl = template.createInstance(context, onAction, function onRebuild(){
+                tmpl = newAttach.tmpl = template.createInstance(context, onAction, onRebuild, bindings, bindingInterface);
                 tmpl.parent = tmpl.element.parentNode || tmpl.element;
                 updateAttach.call(newAttach);
               }, bindings, bindingInterface);

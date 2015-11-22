@@ -107,6 +107,7 @@ var files_1_4 = [
   'app/src/template/l10n-markup/style.css'
 ];
 var files_1_5 = [
+  'app/lib/basis/devpanel.js',
   'app/root/require-wo-extension.js',
   'app/src/require-wo-extension.js'
 ];
