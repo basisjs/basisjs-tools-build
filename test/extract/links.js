@@ -106,6 +106,10 @@ var files_1_4 = [
   'app/src/template/l10n-markup/style-import.css',
   'app/src/template/l10n-markup/style.css'
 ];
+var files_1_5 = [
+  'app/root/require-wo-extension.js',
+  'app/src/require-wo-extension.js'
+];
 
 function fileWarnings(flow){
   return flow.files.warns.map(function(w){
@@ -219,6 +223,38 @@ describe('extract file graph', function(){
   describe('basis.js 1.4', function(){
     var envPath = __dirname + '/env/basis1.4';
     var files = files_1_3.concat(files_1_4);
+
+    it('cwd is upward index.html location', function(){
+      return assertExtract(
+        envPath, '',
+        [],
+        files
+      );
+    });
+
+    it('cwd is index.html location', function(){
+      return assertExtract(
+        envPath, '/app',
+        [],
+        files
+      );
+    });
+
+    it('cwd is nested index.html dir', function(){
+      return assertExtract(
+        envPath, '/app/src',
+        [],
+        files
+      );
+    });
+  });
+
+  //
+  // basis.js 1.5
+  //
+  describe('basis.js 1.5', function(){
+    var envPath = __dirname + '/env/basis1.5';
+    var files = files_1_3.concat(files_1_4, files_1_5);
 
     it('cwd is upward index.html location', function(){
       return assertExtract(
