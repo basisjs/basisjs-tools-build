@@ -1,0 +1,6 @@
+.file-class-test {
+  background: url(#file-id-test);
+}
+#file-id-test {
+  color: red;
+}

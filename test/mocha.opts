@@ -1,2 +1,2 @@
-test/extract/*.js
+test/build/*.js
 -u bdd

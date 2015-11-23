@@ -1,0 +1,26 @@
+<!doctype html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Test</title>
+
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .inline-class-test {
+      background: url(#inline-id-test);
+    }
+    #inline-id-test {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="html-class-test" id="html-id-test"></div>
+  <script src="lib/basis.js" basis-config=""></script>
+  <script>
+    basis.require('basis.template');
+    basis.require('./template.tmpl');
+  </script>
+</body>
+</html>
