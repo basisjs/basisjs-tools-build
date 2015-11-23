@@ -1,3 +1,9 @@
+## 1.1.0 (November 23, 2015)
+
+- build: new option `--silent` to prevent any output to `stdout`
+- build: new value `none` for `--target` option (prevents file writing to FS)
+- build: don't minimize `id` names when `--css-optimize-names` is using, since unsafe as tools don't found every `id` usage case for now
+
 ## 1.0.2 (November 22, 2015)
 
 - extract: return paths relative to `base`

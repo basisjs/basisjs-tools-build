@@ -3,7 +3,7 @@ var path = require('path');
 var assert = require('assert');
 
 describe('build with --css-optimize-names', function(){
-  it.only('should replace classes but don\'t ids', function(){
+  it('should replace classes but don\'t ids', function(){
     var cwd = __dirname + '/env/app';
     process.env.PWD = cwd;
 
