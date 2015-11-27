@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "basisjs-tools-config": "1.0.1",
-    "basisjs-tools-ast": "1.0.4",
+    "basisjs-tools-ast": "basisjs/basisjs-tools-ast#64b130f9c87573b8fa8e0a461957f6e1ba60a074",
 
     "clap": "1.0.8",
     "chalk": "1.1.1",
