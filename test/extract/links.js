@@ -152,6 +152,9 @@ function assertExtract(baseURI, path, args, files){
   return cli.extract.run(args.concat('--silent'))
     .then(function(flow){
       assertFileGraph(flow, files, baseURI);
+      assert.equal(flow.warns.length, 0, 'Has warnings:\n  ' + flow.warns.map(function(item){
+        return item.message;
+      }).join('\n  '));
     });
 };
 
