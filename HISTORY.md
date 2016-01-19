@@ -1,3 +1,7 @@
+## 1.2.0 (January 19, 2016)
+
+- bump dependencies
+
 ## 1.1.0 (November 23, 2015)
 
 - build: new option `--silent` to prevent any output to `stdout`
