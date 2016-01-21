@@ -1,3 +1,7 @@
+## 1.2.1 (January 21, 2016)
+
+- extract: don't warn on ids with no css rulesets for them (#3)
+
 ## 1.2.0 (January 19, 2016)
 
 - lint: check for top level duplicate `var` declarations
