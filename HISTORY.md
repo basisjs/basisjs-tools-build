@@ -1,5 +1,8 @@
 ## 1.2.0 (January 19, 2016)
 
+- lint: check for top level duplicate `var` declarations
+- build: don't exit on `closure-compiler` notify message about stdin input
+- extract: don't warn on unknown type for `<script>` (since could be used for templates)
 - bump dependencies
 
 ## 1.1.0 (November 23, 2015)
