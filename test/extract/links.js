@@ -109,7 +109,17 @@ var files_1_4 = [
 var files_1_5 = [
   'app/lib/basis/devpanel.js',
   'app/root/require-wo-extension.js',
-  'app/src/require-wo-extension.js'
+  'app/src/require-wo-extension.js',
+  'app/root/img/tmpl/img-srcset-1x.gif',
+  'app/root/img/tmpl/img-srcset-2x.gif',
+  'app/root/img/tmpl/picture-img-src.gif',
+  'app/root/img/tmpl/picture-source-srcset-1x.gif',
+  'app/root/img/tmpl/picture-source-srcset-2x.gif',
+  'app/root/img/html/img-srcset-1x.gif',
+  'app/root/img/html/img-srcset-2x.gif',
+  'app/root/img/html/picture-img-src.gif',
+  'app/root/img/html/picture-source-srcset-1x.gif',
+  'app/root/img/html/picture-source-srcset-2x.gif'
 ];
 
 function fileWarnings(flow){
