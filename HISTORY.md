@@ -1,3 +1,9 @@
+## 1.3.1 (February 16, 2016)
+
+- build: fix issue when execute `basis.js` modules with all debug info cut off (because of `--js-cut-dev`)
+- try to use plugin only if `target` setting is not set or has some special value (fixes #7)
+  - For every builder tasks (except `find`) `build` value should be used. To set specific command its name should be starts with `build:` prefix, i.e. `build:lint` for `lint`.
+
 ## 1.3.0 (February 16, 2016)
 
 - **NEW**: basic plugins support similar to dev-server (replacement for preprocess settings). See example [basisjs-tools-babel-plugin](https://github.com/wuzyk/basisjs-tools-babel-plugin) by @wuzyk
