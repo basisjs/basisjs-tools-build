@@ -1,7 +1,11 @@
+## 1.3.2 (February 16, 2016)
+
+- FIX: first url in `srcset` isn't parse correctly if value starts with whitespaces
+
 ## 1.3.1 (February 16, 2016)
 
-- build: fix issue when execute `basis.js` modules with all debug info cut off (because of `--js-cut-dev`)
-- try to use plugin only if `target` setting is not set or has some special value (fixes #7)
+- FIX: issue when execute `basis.js` modules with all debug info cut off (because of `--js-cut-dev`)
+- FIX: try to use plugin only if `target` setting is not set or has some special value (fixes #7)
   - For every builder tasks (except `find`) `build` value should be used. To set specific command its name should be starts with `build:` prefix, i.e. `build:lint` for `lint`.
 
 ## 1.3.0 (February 16, 2016)
