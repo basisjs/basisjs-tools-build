@@ -1,3 +1,11 @@
+## 1.3.0 (February 16, 2016)
+
+- **NEW**: basic plugins support similar to dev-server (replacement for preprocess settings). See example [basisjs-tools-babel-plugin](https://github.com/wuzyk/basisjs-tools-babel-plugin) by @wuzyk
+  - `preprocess` and `extFileTypes` options aren't supported in `basis.config` anymore
+- **NEW**: support for `srcset` attribute on `<img>` and `<source>` elements (for HTML and templates)
+- extract: better warn message construct when process arguments from `basis.dev.warn()` and `basis.dev.error()`
+- lint: fix output warnings with no file (wrongly omit before)
+
 ## 1.2.1 (January 21, 2016)
 
 - extract: don't warn on ids with no css rulesets for them (#3)
@@ -17,7 +25,7 @@
 
 ## 1.0.2 (November 22, 2015)
 
-- extract: return paths relative to `base`
+- extract: return paths reltaive to `base`
 - extract: remove old `basis.js` l10n support in result (prior to `1.0`)
 - extract: fix `require` resolving for paths w/o extension for `basis.js` 1.5
 
