@@ -1,0 +1,15 @@
+<b:style src="./rel.css"/>
+<b:l10n src="./rel-explicit.l10n"/>
+
+<b:include src="./rel-include.tmpl"/>
+<img src="./root/image.svg"/>
+<img srcset="root/img/tmpl/img-srcset-1x.gif 1x, root/img/tmpl/img-srcset-2x.gif 2x"/>
+<picture>
+  <source srcset="
+    root/img/tmpl/picture-source-srcset-1x.gif 1x,
+    root/img/tmpl/picture-source-srcset-2x.gif 2x
+  "/>
+  <img src="root/img/tmpl/picture-img-src.gif"/>
+</picture>
+<div style="background: url(root/attr-style-image.svg)"/>
+{l10n:test}
