@@ -18,7 +18,7 @@
     "node": ">=0.12.0"
   },
   "dependencies": {
-    "basisjs-tools-ast": "1.1.0",
+    "basisjs-tools-ast": "1.2.0",
     "basisjs-tools-config": "1.1.0",
     "chalk": "1.1.1",
     "clap": "1.1.0",
