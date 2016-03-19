@@ -1,3 +1,25 @@
+## 1.4. (March 19, 2016)
+
+### Extract
+
+- support of new `basis.js` template declaration resources format
+- add `preset` support (w/o parallel running)
+
+### Build
+
+- add non-style resource list if any to template description in resource map (makes non-style resources work as in dev)
+
+### Common
+
+- fix CLI values overriding by preset values (CLI values has higher priority)
+- return non-zero code on parallel task running when one of task is failed (#9)
+- make possible to specify input file when presets are setup
+- always exit on `Flow#exit()` but throw exception in some cases
+- bump dependencies
+  - `clap` [1.1.0](https://github.com/lahmatiy/clap/releases/tag/v1.1.0)
+  - `basisjs-tools-config` [1.1.0](https://github.com/basisjs/basisjs-tools-config/releases/tag/v1.1.0) (config in `package.json` support)
+  - `csso` 1.7.1
+
 ## 1.3.2 (February 16, 2016)
 
 - FIX: first url in `srcset` isn't parse correctly if value starts with whitespaces
