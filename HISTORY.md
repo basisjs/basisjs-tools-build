@@ -1,4 +1,8 @@
-## 1.4. (March 19, 2016)
+## 1.4.1 (March 19, 2016)
+
+- fix `csso` version issue
+
+## 1.4.0 (March 19, 2016)
 
 ### Extract
 
