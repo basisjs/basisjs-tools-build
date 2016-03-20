@@ -12,7 +12,9 @@
     },
 
     "disallowMultipleVarDecl": true,
-    "disallowEmptyBlocks": true,
+    "disallowEmptyBlocks": {
+        "allExcept": ["comments"]
+    },
 
     "requireSpacesInsideObjectBrackets": "all",
     "disallowSpacesInsideArrayBrackets": true,
