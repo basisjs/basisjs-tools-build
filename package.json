@@ -1,18 +1,15 @@
 {
   "name": "basisjs-tools-build",
-  "title": "Basis.js developer build tools",
+  "title": "Basis.js build tools",
   "version": "1.4.0",
   "homepage": "https://github.com/basisjs/basisjs-tools",
-  "description": "Developer build tools for basis.js framework",
+  "description": "Build tools for basis.js framework",
   "author": "Roman Dvornov <rdvornov@gmail.com>",
   "license": "MIT",
   "contributors": [
     "Roman Dvornov <rdvornov@gmail.com>"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/basisjs/basisjs-tools-build.git"
-  },
+  "repository": "basisjs/basisjs-tools-build",
   "main": "./lib/index.js",
   "engines": {
     "node": ">=0.12.0"
