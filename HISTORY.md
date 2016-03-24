@@ -1,3 +1,16 @@
+## 1.5.0 (March 25, 2016)
+
+- bump `basisjs-tools-ast` to `1.3.0` (using `CSSO` 1.8.0 with usage data support)
+
+### extract
+
+- new target `css-usage` that output collected `CSS` usage data in `JSON` format
+
+### build
+
+- new CLI option `--css-usage` to use usage data (class names white list and scopes) for `CSS` compression
+- new CLI option `--stat` to output build statistics in non-verbose mode
+
 ## 1.4.1 (March 19, 2016)
 
 - fix `csso` version issue
