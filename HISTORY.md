@@ -1,3 +1,7 @@
+## 1.5.1 (March 25, 2016)
+
+- fix build done time output
+
 ## 1.5.0 (March 25, 2016)
 
 - bump `basisjs-tools-ast` to `1.3.0` (using `CSSO` 1.8.0 with usage data support)
