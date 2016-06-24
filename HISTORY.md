@@ -1,3 +1,12 @@
+## 1.6.0 (June 24, 2016)
+
+- Added support for `<link rel="image-src">` (@istrel)
+- Added support for basis.js 1.7 dictionaries
+- Added deletion all non-culture and non-meta branches from dictionaries
+- Fixed markup token issue for basis.js prior 1.7
+- Fixed `anim:` class name renaming (`--css-optimize-names`)
+- Fixed class renaming in CSS usage data when `--css-optimize-names` is used
+
 ## 1.5.1 (March 25, 2016)
 
 - fix build done time output
