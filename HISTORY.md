@@ -1,3 +1,11 @@
+## 1.7.0 (July 15, 2016)
+
+- Don't pack JavaScript with implicit `jsPackCmd`, but using `uglify.js` instead or explicit `jsPackCmd` if specified
+- Fixed warning count on build in non-verbose mode
+- Added warning count output for each build handler summary
+- Implemented option `--l10n-package` to store l10n cultures outside of bundle (except selected one) and load them asynchronously on demand (@fateevv)
+- Bump `basisjs-tools-ast` to [1.4.0](https://github.com/basisjs/basisjs-tools-ast/releases/tag/v1.4.0)
+
 ## 1.6.0 (June 24, 2016)
 
 - Added support for `<link rel="image-src">` (@istrel)
