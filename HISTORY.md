@@ -1,3 +1,7 @@
+## 1.7.1 (July 18, 2016)
+
+- Fixed wrong inclusion culture packages in bundle when using `--l10n-package` (#13)
+
 ## 1.7.0 (July 15, 2016)
 
 - Don't pack JavaScript with implicit `jsPackCmd`, but using `uglify.js` instead or explicit `jsPackCmd` if specified

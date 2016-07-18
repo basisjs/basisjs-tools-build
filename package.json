@@ -1,7 +1,7 @@
 {
   "name": "basisjs-tools-build",
   "title": "Basis.js build tools",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "homepage": "https://github.com/basisjs/basisjs-tools",
   "description": "Build tools for basis.js framework",
   "author": "Roman Dvornov <rdvornov@gmail.com>",
