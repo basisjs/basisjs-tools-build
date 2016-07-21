@@ -1,3 +1,7 @@
+## 1.7.2 (July 21, 2016)
+
+- Changed path format for implicit `SourceWrappers` to neutral one (change prefix `#N` → `.N`) to fix issue when `SourceWrapper#path` is using as `<b:include>` source (`src` attribute value)
+
 ## 1.7.1 (July 18, 2016)
 
 - Fixed wrong inclusion culture packages in bundle when using `--l10n-package` (#13)
