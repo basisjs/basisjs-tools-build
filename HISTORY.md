@@ -1,3 +1,11 @@
+## 1.8.0 (August 10, 2016)
+
+- Implemented JavaScript bundle mode for `build`
+  - New option `--js-bundle` to produce a JavaScript bundle with optional argument `format` (currently `js` or `json`)
+  - New option `--js-bundle-name` to set a custom base name for bundle file (makes sense when `--js-bundle` is using, extension is choosing according to `format`)
+- Implemented symlink feature and `addSymlink()` method for plugin API
+- Fixed plugin relative path processing
+
 ## 1.7.2 (July 21, 2016)
 
 - Changed path format for implicit `SourceWrappers` to neutral one (change prefix `#N` → `.N`) to fix issue when `SourceWrapper#path` is using as `<b:include>` source (`src` attribute value)
