@@ -1,3 +1,7 @@
+## 1.8.1 (August 16, 2016)
+
+- npm publish issue fix
+
 ## 1.8.0 (August 10, 2016)
 
 - Implemented JavaScript bundle mode for `build`
