@@ -66,3 +66,5 @@ l10n.dictionary('ns:../dictionary.l10n');
 resource('./template/rel.tmpl');
 resource('./template/ns.tmpl');
 template.define('ns.template', resource('ns:template.tmpl')); // TODO: remove when template package will be available
+
+template.theme('test').define('exclusive-l10n-markup', resource('./template/l10n-markup/exclusive-l10n-markup.tmpl'));

@@ -110,6 +110,8 @@ var files_1_5 = [
   'app/lib/basis/devpanel.js',
   'app/root/require-wo-extension.js',
   'app/src/require-wo-extension.js',
+  'app/src/template/l10n-markup/exclusive-l10n-markup.l10n',
+  'app/src/template/l10n-markup/exclusive-l10n-markup.tmpl',
   'app/index/image-src.svg',
   'app/root/img/tmpl/img-srcset-1x.gif',
   'app/root/img/tmpl/img-srcset-2x.gif',
