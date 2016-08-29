@@ -1,6 +1,10 @@
+## 1.8.2 (August 29, 2016)
+
+
+
 ## 1.8.1 (August 16, 2016)
 
-- npm publish issue fix
+- Fixed `npm` publish issue fix
 
 ## 1.8.0 (August 10, 2016)
 
