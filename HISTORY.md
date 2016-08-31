@@ -1,6 +1,12 @@
+## 1.8.3 (August 31, 2016)
+
+- Fixed exception on duplicate template path definition. Extractor throws a fatal warning on duplication. (#16)
+- Fixed issue when all themes styles activated on app start. Theme styles work as expected now.
+
 ## 1.8.2 (August 29, 2016)
 
-
+- Fixed issue when plugins filename are resolving before filtering by `target` setting (#14)
+- Fixed exception when `l10n` markup token introducing by non-`base` theme template (#15)
 
 ## 1.8.1 (August 16, 2016)
 
