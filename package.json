@@ -27,9 +27,9 @@
   },
   "scripts": {
     "test": "mocha",
-    "test-code": "jscs lib && eslint lib",
-    "test-all": "npm run test-code && npm test",
-    "travis": "npm run test-all"
+    "lint": "jscs lib && eslint lib",
+    "lint-and-test": "npm run lint && npm test",
+    "travis": "npm run lint-and-test"
   },
   "dependencies": {
     "basisjs-tools-ast": "~1.4.0",
