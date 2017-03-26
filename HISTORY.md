@@ -1,3 +1,9 @@
+## 1.9.1 (March 26, 2017)
+
+### Build
+
+- Fixed `--js-bundle-name` option when using from CLI
+
 ## 1.9.0 (March 25, 2017)
 
 ### Common
