@@ -1,3 +1,20 @@
+## 1.9.0 (March 25, 2017)
+
+### Common
+
+- Implemented `--ignore-warnings` option to ignore warnings, may take a list of patterns (@naorunaoru, #18)
+
+### Extract
+
+- Added tools version to banner
+
+### Build
+
+- Implemented file content inlining for `[basis.]asset()`
+- Fixed cache invalidation for l10n culture packages (@fateevv, #17)
+- Fixed output build done message in silent mode
+- Fixed output warnings message in silent mode
+
 ## 1.8.3 (August 31, 2016)
 
 - Fixed exception on duplicate template path definition. Extractor throws a fatal warning on duplication. (#16)
