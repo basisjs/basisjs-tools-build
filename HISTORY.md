@@ -2,6 +2,12 @@
 
 ### Build
 
+- Fixed warning on implicit usage of `module` in basis.js core module
+
+## 1.9.2 (May 17, 2017)
+
+### Build
+
 - Fixed warning on implicit usage of `__filename` in basis.js core module
 
 ## 1.9.1 (March 26, 2017)
