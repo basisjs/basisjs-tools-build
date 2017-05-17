@@ -1,3 +1,7 @@
+## 1.10.0 (May 17, 2017)
+
+- Moved to [CSSTree](https://github.com/csstree/csstree) AST format for CSS (at least 2x boost in CSS processing)
+
 ## 1.9.2 (May 17, 2017)
 
 ### Build
