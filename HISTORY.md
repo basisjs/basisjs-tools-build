@@ -1,8 +1,12 @@
+## 1.10.1 (May 26, 2017)
+
+- Fixed image inlining in CSS (i.e. `--css-inline-image` option)
+
 ## 1.10.0 (May 17, 2017)
 
 - Moved to [CSSTree](https://github.com/csstree/csstree) AST format for CSS (at least 2x boost in CSS processing)
 
-## 1.9.2 (May 17, 2017)
+## 1.9.3 (May 17, 2017)
 
 ### Build
 
