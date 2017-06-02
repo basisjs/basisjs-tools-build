@@ -1,3 +1,7 @@
+## 1.10.2 (June 2, 2017)
+
+- Fixed position resolving in CSS (@smelukov, #20)
+
 ## 1.10.1 (May 26, 2017)
 
 - Fixed image inlining in CSS (i.e. `--css-inline-image` option)
