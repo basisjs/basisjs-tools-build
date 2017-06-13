@@ -1,3 +1,7 @@
+## 1.10.3 (June 13, 2017)
+
+- Fixed option processing that takes several values, i.e. `--theme` and `--ignore-warnings` (@smelukov, #21)
+
 ## 1.10.2 (June 2, 2017)
 
 - Fixed position resolving in CSS (@smelukov, #20)
