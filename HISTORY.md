@@ -1,3 +1,31 @@
+## 1.10.3 (June 13, 2017)
+
+- Fixed option processing that takes several values, i.e. `--theme` and `--ignore-warnings` (@smelukov, #21)
+
+## 1.10.2 (June 2, 2017)
+
+- Fixed position resolving in CSS (@smelukov, #20)
+
+## 1.10.1 (May 26, 2017)
+
+- Fixed image inlining in CSS (i.e. `--css-inline-image` option)
+
+## 1.10.0 (May 17, 2017)
+
+- Moved to [CSSTree](https://github.com/csstree/csstree) AST format for CSS (at least 2x boost in CSS processing)
+
+## 1.9.3 (May 17, 2017)
+
+### Build
+
+- Fixed warning on implicit usage of `module` in basis.js core module
+
+## 1.9.2 (May 17, 2017)
+
+### Build
+
+- Fixed warning on implicit usage of `__filename` in basis.js core module
+
 ## 1.9.1 (March 26, 2017)
 
 ### Build

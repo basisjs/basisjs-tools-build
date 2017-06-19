@@ -26,10 +26,10 @@ describe('build with --css-optimize-names', function(){
 
         // style.css
         assert(!/\.file-class-test/.test(content('build/style.css')));
-        assert(/\.a \{/.test(content('build/style.css')));
+        assert(/\.a\{/.test(content('build/style.css')));
         assert(/\#file-id-test/.test(content('build/style.css')));
         assert(!/\.inline-class-test/.test(content('build/style.css')));
-        assert(/\.c \{/.test(content('build/style.css')));
+        assert(/\.c\{/.test(content('build/style.css')));
         assert(/\#inline-id-test/.test(content('build/style.css')));
 
         // script.js
