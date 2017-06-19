@@ -14,6 +14,7 @@
     "eslint:recommended"
   ],
   "rules": {
+    "no-redeclare": "off",
     "semi": "error",
     "no-console": "off",
     "no-cond-assign": "off",
