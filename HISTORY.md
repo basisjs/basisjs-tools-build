@@ -1,3 +1,7 @@
+## 1.11.1 (September 5, 2017)
+
+- Update dependencies
+
 ## 1.11.0 (September 5, 2017)
 
 - Migrated to [ESTree](https://github.com/estree/estree) AST format for JavaScript (@smelukov)
