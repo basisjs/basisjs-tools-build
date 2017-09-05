@@ -1,3 +1,7 @@
+## 1.11.0 (September 5, 2017)
+
+- Migrated to [ESTree](https://github.com/estree/estree) AST format for JavaScript (@smelukov)
+
 ## 1.10.3 (June 13, 2017)
 
 - Fixed option processing that takes several values, i.e. `--theme` and `--ignore-warnings` (@smelukov, #21)
@@ -12,7 +16,7 @@
 
 ## 1.10.0 (May 17, 2017)
 
-- Moved to [CSSTree](https://github.com/csstree/csstree) AST format for CSS (at least 2x boost in CSS processing)
+- Migrated to [CSSTree](https://github.com/csstree/csstree) AST format for CSS (at least 2x boost in CSS processing)
 
 ## 1.9.3 (May 17, 2017)
 
