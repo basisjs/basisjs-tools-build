@@ -43,6 +43,10 @@ describe('build', function(){
                         .replace(/ content=".+"/, '')
                         .replace(/script\.js\?[^"]+/, 'script.js');
                     break;
+                case 'script.js':
+                    // it's funny but JS parser can change the order of regexp flags
+                    content = content.replace(/\/ig;/, '\/gi;');
+                    break;
             }
             return content;
         });
