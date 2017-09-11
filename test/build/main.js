@@ -39,7 +39,9 @@ describe('build', function(){
         checkResult(flow, path.join(__dirname, '/expected/default'), function(file, content){
             switch (file) {
                 case 'index.html':
-                    content = content.replace(/ content=".+"/, '');
+                    content = content
+                        .replace(/ content=".+"/, '')
+                        .replace(/script\.js\?[^"]+/, 'script.js');
                     break;
             }
             return content;
@@ -59,12 +61,13 @@ describe('build', function(){
         checkResult(flow, path.join(__dirname, '/expected/packed'), function(file, content){
             switch (file) {
                 case 'index.html':
-                    content = content.replace(/ content=".+"/, '');
+                    content = content
+                        .replace(/ content=".+"/, '')
+                        .replace(/script\.js\?[^"]+/, 'script.js');
                     break;
-                case 'index.js':
-                    // content may change with deps update
-                    content = content.replace(/^function(){.+}/, 'function(){}');
-                    console.log(content);
+                case 'script.js':
+                    // content may vary with deps update
+                    content = content.replace(/function\(\){.+}/, 'function(){}');
                     break;
             }
             return content;
