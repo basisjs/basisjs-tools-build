@@ -21,15 +21,16 @@ describe('build with --css-optimize-names', function(){
 
         // index.html
         assert(!/html-class-test/.test(content('build/index.html')));
-        assert(/class="b"/.test(content('build/index.html')));
+        assert(/class="c"/.test(content('build/index.html')));
         assert(/id="html-id-test"/.test(content('build/index.html')));
+
 
         // style.css
         assert(!/\.file-class-test/.test(content('build/style.css')));
         assert(/\.a\{/.test(content('build/style.css')));
         assert(/\#file-id-test/.test(content('build/style.css')));
         assert(!/\.inline-class-test/.test(content('build/style.css')));
-        assert(/\.c\{/.test(content('build/style.css')));
+        assert(/\.d\{/.test(content('build/style.css')));
         assert(/\#inline-id-test/.test(content('build/style.css')));
 
         // script.js

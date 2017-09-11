@@ -1,0 +1,74 @@
+var assert = require('assert');
+var path = require('path');
+var fs = require('fs');
+var cli = require('../../lib/cli.js');
+var testDir = path.join(__dirname, '/env/app');
+
+function sortByPath(a, b) {
+    return a.path > b.path ? 1 : a.path < b.path ? -1 : 0;
+}
+
+function checkResult(flow, expectedPath, preprocessContent) {
+    var expectedFiles = fs.readdirSync(expectedPath).map(function(file){
+        return {
+            path: file,
+            content: preprocessContent(file, fs.readFileSync(path.join(expectedPath, file), 'utf8'))
+        };
+    }).sort(sortByPath);
+
+    var actualFiles = flow.result.map(function(file){
+        var filePath = path.relative(flow.options.output, file.path);
+        return {
+            path: filePath,
+            content: preprocessContent(filePath, file.content)
+        };
+    }).sort(sortByPath);
+
+    assert.deepEqual(actualFiles, expectedFiles);
+}
+
+describe('build', function(){
+  it('default', function(){
+    return cli.build.run([
+        '--silent',
+        '--target', 'none',
+        '--base', testDir,
+        '--file', path.join(testDir, 'index.html')
+      ])
+      .then(function(flow){
+        checkResult(flow, path.join(__dirname, '/expected/default'), function(file, content){
+            switch (file) {
+                case 'index.html':
+                    content = content.replace(/ content=".+"/);
+                    break;
+            }
+            return content;
+        });
+      });
+  });
+
+  it('pack', function(){
+    return cli.build.run([
+        '--silent',
+        '--target', 'none',
+        '--base', testDir,
+        '--file', path.join(testDir, 'index.html'),
+        '--pack'
+      ])
+      .then(function(flow){
+        checkResult(flow, path.join(__dirname, '/expected/packed'), function(file, content){
+            switch (file) {
+                case 'index.html':
+                    content = content.replace(/ content=".+"/);
+                    break;
+                case 'index.js':
+                    // content may change with deps update
+                    content = content.replace(/^function(){.+}/, 'function(){}');
+                    console.log(content);
+                    break;
+            }
+            return content;
+        });
+      });
+  });
+});
