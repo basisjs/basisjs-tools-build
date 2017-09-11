@@ -39,7 +39,7 @@ describe('build', function(){
         checkResult(flow, path.join(__dirname, '/expected/default'), function(file, content){
             switch (file) {
                 case 'index.html':
-                    content = content.replace(/ content=".+"/);
+                    content = content.replace(/ content=".+"/, '');
                     break;
             }
             return content;
@@ -59,7 +59,7 @@ describe('build', function(){
         checkResult(flow, path.join(__dirname, '/expected/packed'), function(file, content){
             switch (file) {
                 case 'index.html':
-                    content = content.replace(/ content=".+"/);
+                    content = content.replace(/ content=".+"/, '');
                     break;
                 case 'index.js':
                     // content may change with deps update
@@ -70,5 +70,5 @@ describe('build', function(){
             return content;
         });
       });
-  });
+  }).timeout(5000);
 });
