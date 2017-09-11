@@ -1,3 +1,7 @@
+## 1.11.2 (September 11, 2017)
+
+- Fixed build issue when `--js-pack` is used
+
 ## 1.11.1 (September 5, 2017)
 
 - Update dependencies
