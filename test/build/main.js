@@ -77,5 +77,5 @@ describe('build', function(){
             return content;
         });
       });
-  }).timeout(5000);
+  }).timeout(15000);
 });
