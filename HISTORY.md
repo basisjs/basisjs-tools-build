@@ -1,3 +1,8 @@
+## 1.11.3 (September 18, 2017)
+
+- Update `basis.resource` with non-string argument exception such way, that it works with relative paths as well as namespace basis paths (@istrel, #26)
+- Minor fixes
+
 ## 1.11.2 (September 11, 2017)
 
 - Fixed build issue when `--js-pack` is used
