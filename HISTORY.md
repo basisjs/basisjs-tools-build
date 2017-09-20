@@ -1,3 +1,7 @@
+## 1.11.4 (September 20, 2017)
+
+- Fixed issue with `clap` (bumped to `^1.2.3`)
+
 ## 1.11.3 (September 18, 2017)
 
 - Update `basis.resource` with non-string argument exception such way, that it works with relative paths as well as namespace basis paths (@istrel, #26)
