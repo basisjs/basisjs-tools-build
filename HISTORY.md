@@ -1,3 +1,10 @@
+## 1.12.0 (November 8, 2017)
+
+- Replaced `uglify-js` to `uglify-es`
+- Added posibility to config JavaScript minifier with `--js-pack-options` CLI option or `jsPackOptions` field in config file
+- Fixed exception handling when command run in child process and exception is connected with dependencies
+- Update dependencies
+
 ## 1.11.4 (September 20, 2017)
 
 - Fixed issue with `clap` (bumped to `^1.2.3`)
