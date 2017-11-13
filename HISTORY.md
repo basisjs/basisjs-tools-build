@@ -1,3 +1,7 @@
+## 1.12.1 (November 13, 2017)
+
+- Fixed issue with `mime` that breaks a build
+
 ## 1.12.0 (November 8, 2017)
 
 - Replaced `uglify-js` to `uglify-es`
