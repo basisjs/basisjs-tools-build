@@ -1,7 +1,7 @@
 {
   "name": "basisjs-tools-build",
   "title": "Basis.js build tools",
-  "version": "1.12.1",
+  "version": "1.12.2",
   "homepage": "https://github.com/basisjs/basisjs-tools",
   "description": "Build tools for basis.js framework",
   "author": "Roman Dvornov <rdvornov@gmail.com>",
@@ -38,17 +38,17 @@
     "travis": "npm run lint-and-test"
   },
   "dependencies": {
-    "basisjs-tools-ast": "~1.6.0",
+    "basisjs-tools-ast": "~1.6.1",
     "basisjs-tools-config": "~1.1.0",
     "chalk": "^2.3.0",
     "clap": "^1.2.3",
     "es6-promise-polyfill": "^1.2.0",
     "fixed-width-string": "^1.0.0",
-    "mime": "~2.0.3",
+    "mime": "^2.0.5",
     "minimatch": "^3.0.2",
     "resolve": "^1.1.7",
     "seedrandom": "~2.4.2",
-    "uglify-es": "~3.1.8"
+    "uglify-es": "^3.1.10"
   },
   "devDependencies": {
     "eslint": "^2.2.0",

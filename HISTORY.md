@@ -1,3 +1,8 @@
+## 1.12.2 (January 16, 2018)
+
+- Fixed data URI inlining to inline SVG resouces
+- Fixed infinite recursion on CSS minification
+
 ## 1.12.1 (November 13, 2017)
 
 - Fixed issue with `mime` that breaks a build
